@@ -1,16 +1,19 @@
-from InputDataReader import InputDataReader 
-from SumFinder import SumFinder
+from DayOne import DayOne 
+from DayTwo import DayTwo 
+from InputDataReader import InputDataReader
+
+
 
 
 msg = "hello world"
 print(msg)
 
+passwords = InputDataReader().read_day_two()
 
-numbers = InputDataReader().readFile()
+xx = DayTwo().read_day_two(passwords, 1)
+print(xx)
 
-sumFinder = SumFinder()
-productOf2 = sumFinder.findSumInTwo(numbers, 2020)
-productOf3 = sumFinder.findSumInThree(numbers, 2020)
 
-print(productOf2)
-print(productOf3)
+#DayOne().do_day_one()
+
+
