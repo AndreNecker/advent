@@ -26,7 +26,10 @@ class InputDataReader():
         for line in Lines:
             boolCols = []
             for column in line:
-                boolCols.append(column == '#')
+                if (column == '#'):
+                    boolCols.append(True)
+                if (column == '.'):
+                    boolCols.append(False)
             boolLines.append(boolCols)
         return boolLines
 
