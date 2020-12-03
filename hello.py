@@ -1,5 +1,6 @@
 from DayOne import DayOne 
 from DayTwo import DayTwo 
+from DayThree import DayThree 
 from InputDataReader import InputDataReader
 
 
@@ -8,12 +9,10 @@ from InputDataReader import InputDataReader
 msg = "hello world"
 print(msg)
 
-passwords = InputDataReader().read_day_two()
+trees = InputDataReader().read_day_three()
+counted_trees = DayThree().count_trees(trees)
 
-xx = DayTwo().read_day_two(passwords, 1)
-print(xx)
-
-
+print(counted_trees)
 #DayOne().do_day_one()
 
 

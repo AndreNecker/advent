@@ -17,4 +17,17 @@ class InputDataReader():
         Lines = file1.readlines() 
         xx = [PasswordData().set_data(val) for val in Lines]
         return xx
+
+    def read_day_three(self):
+        file1 = open('Data/InputDayThree.txt', 'r') 
+        Lines = file1.readlines() 
+        boolLines = []
+
+        for line in Lines:
+            boolCols = []
+            for column in line:
+                boolCols.append(column == '#')
+            boolLines.append(boolCols)
+        return boolLines
+
   

@@ -7,7 +7,7 @@ class DayTwo():
             count_letter = 0
             for password_letter in line.Password:
                 if password_letter == line.Letter:
-                    count_letter = count_letter + 1 
+                    count_letter = count_letter 
             valid = 0
             if count_letter >= line.min and count_letter <= line.max:
                 valid = 1
