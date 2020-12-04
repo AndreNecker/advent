@@ -12,7 +12,6 @@ class DayThree():
 
             if (tree_map[lineCount][columnCount]):
                 countedTrees = countedTrees + 1
-            print ('line ' + str(lineCount) + ' count ' + str(countedTrees) + ' col ' + str(columnCount))
             lineCount = lineCount + addLines
             columnCount = columnCount + addColumns
         return countedTrees

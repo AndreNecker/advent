@@ -33,4 +33,23 @@ class InputDataReader():
             boolLines.append(boolCols)
         return boolLines
 
+    def read_day_four(self):
+        file1 = open('Data/InputDayFour.txt', 'r') 
+        Lines = file1.readlines() 
+        
+        passports = []
+        passport = ''
+        for line in Lines:
+            line_stripped = line.strip()
+            passport = passport + ' ' + line_stripped
+
+            if (len(line_stripped) == 0):
+                passports.append(passport)
+                passport = ''
+
+        if (len(passport) > 0):
+            passports.append(passport)
+        return passports
+
+
   

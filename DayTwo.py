@@ -1,6 +1,16 @@
 
 class DayTwo():
 
+    def read_day_two(self, data, partTwo):
+     
+        count_valid_passwords = 0
+        for line in data:
+            valid = self.is_valid(line, partTwo)
+            if valid == 1:
+                count_valid_passwords = count_valid_passwords + 1
+        return count_valid_passwords
+
+        
     def is_valid(self, line, partTwo):    
         valid = 0
         if (partTwo == 0):
@@ -16,13 +26,4 @@ class DayTwo():
                 valid = 1        
         return valid
         
-
-    def read_day_two(self, data, partTwo):
-     
-        count_valid_passwords = 0
-        for line in data:
-            valid = self.is_valid(line, partTwo)
-            if valid == 1:
-                count_valid_passwords = count_valid_passwords + 1
-        return count_valid_passwords
            
