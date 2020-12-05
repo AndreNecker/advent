@@ -1,8 +1,5 @@
-from DayOne import DayOne 
-from DayTwo import DayTwo 
-from DayThree import DayThree 
-from DayFour import DayFour 
-from InputDataReader import InputDataReader
+from Days.DayFive import DayFive 
+from Days.InputDataReader import InputDataReader
 
  
 
@@ -10,8 +7,8 @@ from InputDataReader import InputDataReader
 msg = "hello world"
 print(msg)
 
-passports = InputDataReader().read_day_four()
+seats = InputDataReader().read_day_five()
 
-xx = DayFour().count_passports(passports)
+xx = DayFive().get_seat_number(seats)
 
 print(xx)
