@@ -1,4 +1,4 @@
-from Days.DayFive import DayFive 
+from Days.DaySix import DaySix 
 from Days.InputDataReader import InputDataReader
 
  
@@ -7,8 +7,7 @@ from Days.InputDataReader import InputDataReader
 msg = "hello world"
 print(msg)
 
-seats = InputDataReader().read_day_five()
+votes = InputDataReader().read_day_six_per_person_per_group()
 
-xx = DayFive().get_seat_number(seats)
-
+xx = DaySix().get_number_of_votes_per_group(votes)
 print(xx)

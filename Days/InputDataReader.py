@@ -62,6 +62,39 @@ class InputDataReader():
             seats.append([line_stripped[:7], line_stripped[-3:] ] )
         return seats
 
+    def read_day_six_per_group(self):
+        file1 = open('Data/InputDaySix.txt', 'r') 
+        Lines = file1.readlines()
+        votes = []
+        vote_group = ''
+        for line in Lines:
+            line_stripped = line.strip()
+            if (len(line_stripped) == 0):
+                votes.append(vote_group)
+                vote_group = ''
+            vote_group = vote_group + line_stripped
+        if (len(vote_group) > 0):
+            votes.append(vote_group)
+        return votes
+
+        
+    def read_day_six_per_person_per_group(self):
+        file1 = open('Data/InputDaySix.txt', 'r') 
+        Lines = file1.readlines()
+        votes = []
+        vote_group = []
+        for line in Lines:
+            line_stripped = line.strip()
+            if (len(line_stripped) == 0 and len(vote_group)):
+                votes.append(vote_group)
+                vote_group = []
+            if (len(line_stripped) > 0):
+                vote_group.append(line_stripped)
+        if (len(vote_group) > 0):
+            votes.append(vote_group)
+        return votes
+
+
 
   
 
