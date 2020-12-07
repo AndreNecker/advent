@@ -94,6 +94,25 @@ class InputDataReader():
             votes.append(vote_group)
         return votes
 
+    def read_day_seven(self):
+        file1 = open('Data/InputDaySeven.txt', 'r') 
+        Lines = file1.readlines()
+        xx = {}
+        for line in Lines:
+            line_stripped = line.strip()
+            splitted = line_stripped.split()
+            if (len(splitted) > 7):
+                value = [[splitted[5] + ' ' + splitted[6], int(splitted[4])]]
+                if (len(splitted) > 9):
+                    value.append([splitted[9] + ' ' + splitted[10], int(splitted[8])])
+                if (len(splitted) > 12):
+                    value.append([splitted[13] + ' ' + splitted[14], int(splitted[12])])
+                if (len(splitted) > 17):
+                    value.append([splitted[17] + ' ' + splitted[18], int(splitted[16])])
+                if (len(splitted) > 20):
+                    value.append([splitted[20] + ' ' + splitted[21], int(splitted[19])])
+                xx[splitted[0] + ' ' + splitted[1]] = value
+        return xx
 
 
   
