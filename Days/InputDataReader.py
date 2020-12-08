@@ -114,8 +114,12 @@ class InputDataReader():
                 xx[splitted[0] + ' ' + splitted[1]] = value
         return xx
 
+    def read_day_eight(self):
+        file1 = open('Data/InputDayEight.txt', 'r') 
+        Lines = file1.readlines()
 
-  
+        instructions =  [line.split() for line in Lines]
+        return instructions
 
 
 

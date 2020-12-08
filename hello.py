@@ -1,4 +1,4 @@
-from Days.DaySeven import DaySeven 
+from Days.DayEight import DayEight 
 from Days.InputDataReader import InputDataReader
 
  
@@ -7,7 +7,11 @@ from Days.InputDataReader import InputDataReader
 msg = "hello world"
 print(msg)
 
-bags = InputDataReader().read_day_seven()
+instructions = InputDataReader().read_day_eight()
 
-xx = DaySeven().count_bags_in_gold(bags)
+dayEight = DayEight()
+xx = dayEight.repair_instructions(instructions)
 print(xx)
+if (xx):
+    print(dayEight.accumulator)
+
