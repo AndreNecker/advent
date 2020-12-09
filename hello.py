@@ -1,4 +1,4 @@
-from Days.DayEight import DayEight 
+from Days.DayNine import DayNine 
 from Days.InputDataReader import InputDataReader
 
  
@@ -7,11 +7,11 @@ from Days.InputDataReader import InputDataReader
 msg = "hello world"
 print(msg)
 
-instructions = InputDataReader().read_day_eight()
+numbers = InputDataReader().read_day_nine()
 
-dayEight = DayEight()
-xx = dayEight.repair_instructions(instructions)
+number_to_search = DayNine().get_number_not_sum_of_previous_two(numbers, 25)
+print('number_to_search: ' + str(number_to_search))
+xx = DayNine().get_highest_and_smallest_numbers_to_sum(numbers, number_to_search)
 print(xx)
-if (xx):
-    print(dayEight.accumulator)
+
 

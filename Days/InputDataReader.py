@@ -121,8 +121,12 @@ class InputDataReader():
         instructions =  [line.split() for line in Lines]
         return instructions
 
+    def read_day_nine(self):
+        file1 = open('Data/InputDayNine.txt', 'r') 
+        Lines = file1.readlines()
 
-
+        numbers = [int(line) for line in Lines]
+        return numbers
 
 
 
